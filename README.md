@@ -2,8 +2,6 @@
 
 Program for single token staking and receiving rewards. Daniel Koh, William Wei.
 
-## Design Overview
-
 ## Note
 
 - **This code is unaudited. Use at your own risk.**
@@ -12,6 +10,12 @@ Program for single token staking and receiving rewards. Daniel Koh, William Wei.
 
 [Anchor](https://github.com/project-serum/anchor) is used for developoment, and it's
 recommended workflow is used here. To get started, see the [guide](https://project-serum.github.io/anchor/getting-started/introduction.html).
+
+
+```
+anchor-cli 0.3.1
+solana-cli 2.3.9
+```
 
 ### Build
 
@@ -28,6 +32,10 @@ When testing locally, be sure to build with feature "local-testing" to enable th
 
 ```
 anchor test
+```
+
+```
+anchor test -- --features local-testing,test-id
 ```
 
 ### Verify

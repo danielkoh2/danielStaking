@@ -24,7 +24,7 @@ can be deterministically generated with docker.
 
 ### Test
 
-When testing locally, be sure to build with feature "local-testing" to enable the testing IDs.  You can do this by editing `programs/step-staking/Cargo.toml` and uncommenting the default feature set line.
+When testing locally, be sure to build with feature "local-testing" to enable the testing IDs.  You can do this by editing `programs/daniel-staking/Cargo.toml` and uncommenting the default feature set line.
 
 ```
 anchor test
@@ -39,14 +39,12 @@ into the program you want to verify, e.g., `cd program`, and run
 anchor verify <program-id | write-buffer>
 ```
 
-A list of build artifacts can be found under [releases](https://github.com/step-finance/reward-pool/releases).
-
 ### Deploy
 
 To deploy the program, configure your CLI to the desired network/wallet and run 
 
 ```bash
-solana program deploy --program-id <keypair> target/verifiable/step_staking.so
+solana program deploy --program-id <keypair> target/verifiable/daniel_staking.so
 ```
 
 I would not suggest using anchor deploy at this time; it wouldn't/couldn't really add much value.  Be sure to use `--programid <keypair>` to deploy to the correct address.

@@ -16,18 +16,7 @@ let program = anchor.workspace.DanielStaking as anchor.Program<DanielStaking>;
 const envProvider = anchor.AnchorProvider.env(); //load provider from env
 anchor.setProvider(envProvider);
 
-//we allow this convenience var to change between default env and mock user(s)
-//initially we are the outside actor
 let provider = envProvider;
-//convenience method to set in anchor AND above convenience var
-//setting in anchor allows the rpc and accounts namespaces access
-//to a different wallet from env
-// function setProvider(p: anchor.AnchorProvider) {
-//   provider = p;
-//   anchor.setProvider(p);
-//   program = new anchor.Program(idl as anchor.Idl, p);
-// }
-// setProvider(provider);
 
 describe("daniel-staking", () => {
   //hardcoded in program, read from test keys directory for testing

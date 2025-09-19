@@ -1,0 +1,28 @@
+[package]
+name = "daniel-staking"
+version = "0.1.1"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "daniel_staking"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+#add to default for local testing
+#note, can also use `anchor test -- --feature local-testing,test-id` now
+#default = ["local-testing", "test-id"]
+local-testing = []
+test-id = []
+
+[dependencies]
+anchor-lang = { version = "0.31.1" }
+anchor-spl = {version = "0.31.1"}
+uint = "0.10.0" 

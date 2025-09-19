@@ -1,12 +1,9 @@
-[toolchain]
-package_manager = "yarn"
-
 [features]
-resolution = true
+seeds = false
 skip-lint = false
 
-[programs.localnet]
-danielstaking = "2xoAoRGcm47pSQZShj5muH8b763iyREz388bw2YGQS6L"
+[workspace]
+members = ["programs/daniel-staking"]
 
 [registry]
 url = "https://api.apr.dev"
@@ -16,4 +13,16 @@ cluster = "localnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
-test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 ./tests/**/*.ts"
+
+[programs.localnet]
+daniel_staking = "TesT35sGptoswsVkcLpUUe6U2iTJZE59on1Jno8Vdpg"
+
+[programs.devnet]
+daniel_staking = "Stk5NCWomVN3itaFjLu382u9ibb5jMSHEsh6CuhaGjB"
+
+[programs.testnet]
+daniel_staking = "Stk5NCWomVN3itaFjLu382u9ibb5jMSHEsh6CuhaGjB"
+
+[programs.mainnet]
+daniel_staking = "2xoAoRGcm47pSQZShj5muH8b763iyREz388bw2YGQS6L"
